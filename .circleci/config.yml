@@ -52,6 +52,9 @@ jobs:
           name: Push/release snap
           command: snapcraft push *.snap --release edge
 
+      - run:
+	  echo "Just a variable check $SNAPCRAFT_CREDENTIALS_KEY"
+
 workflows:
   version: 2
   commit:
