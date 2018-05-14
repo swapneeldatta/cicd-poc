@@ -41,7 +41,7 @@ jobs:
 
       - run:
           name: Decrypt credentials
-          command: openssl aes-256-cbc -d -in .circleci/credentials.enc -out credentials -k password -v
+          command: openssl des-ede3-ofb -d -in .circleci/credentials.enc -out credentials -k password -v
 
       - run:
           name: Authenticate snapcraft
