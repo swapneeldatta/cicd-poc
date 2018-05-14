@@ -8,4 +8,4 @@ jobs:
       - run: mvn clean install
       - run: echo "Build successful!"
       - store_artifacts: # store the uberjar as an artifact
-          path: CDTest-0.0.1-SNAPSHOT.jar
+          path: target/CDTest-0.0.1-SNAPSHOT.jar
