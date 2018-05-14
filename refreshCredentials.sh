@@ -5,7 +5,7 @@
 snapcraft export-login credentials
 
 # Encrypt the credential files
-openssl des-ede3-ofb -e -in credentials -out .circleci/credentials.enc
+openssl des-ede3-ofb -bufsize 8 -e -in credentials -out .circleci/credentials.enc
 
 # Cleanup!
 #rm creds

@@ -37,7 +37,7 @@ jobs:
             apt install -y openssl
 
       - run:
-          echo "Just a variable check $SNAPCRAFT_CREDENTIALS_KEY"
+          echo "Just a variable check $SNAPCRAFT_CREDENTIALS_KEY $(openssl version)"
 
       - run:
           name: Decrypt credentials
