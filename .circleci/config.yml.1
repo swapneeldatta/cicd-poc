@@ -1,0 +1,18 @@
+# Declaration of defaults
+defaults: &defaults
+  working_directory: ~/workspace
+  docker:
+    - image: snapcore/snapcraft:edge
+
+
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/openjdk:8u171-node-browsers
+    steps:
+      - checkout
+      - run: mvn clean install
+      - run: echo "Build successful!"
+      - store_artifacts: # store the uberjar as an artifact
+          path: target/CDTest-0.0.1-SNAPSHOT.jar
