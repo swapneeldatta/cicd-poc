@@ -53,7 +53,7 @@ jobs:
           command: snapcraft push *.snap --release edge
 
       - run:
-	  echo "Just a variable check $SNAPCRAFT_CREDENTIALS_KEY"
+          echo "Just a variable check $SNAPCRAFT_CREDENTIALS_KEY"
 
 workflows:
   version: 2
