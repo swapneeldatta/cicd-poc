@@ -5,6 +5,7 @@ jobs:
       - image: circleci/openjdk:8u171-node-browsers
     steps:
       - checkout
-      - run: echo "A first hello"
       - run: mvn clean install
-
+      - run: echo "Build successful!"
+      - store_artifacts: # store the uberjar as an artifact
+          path: CDTest-0.0.1-SNAPSHOT.jar
