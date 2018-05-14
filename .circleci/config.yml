@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/oraclejdk:8
+      - image: circleci/oraclejdk:8u171-node-browsers
     steps:
       - checkout
       - run: echo "A first hello"
