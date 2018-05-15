@@ -1,7 +1,7 @@
-name: hello-buga
-version: '2.10'
-summary: GNU Hello, the "hello world" snap
-description: GNU hello prints a friendly greeting.
+name: buga-cicdtest
+version: '1.0.0'
+summary: CI-CD with snap
+description:  A test to check out CICD with snaps
 grade: stable
 confinement: strict
 
