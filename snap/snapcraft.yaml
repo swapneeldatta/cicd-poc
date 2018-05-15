@@ -9,7 +9,7 @@ apps:
   hello:
     command: bin/hello
   java:
-    command: java
+    command: java -jar /root/workspace/parts/gnu-hello/build/target/CDTest-0.0.1-SNAPSHOT.jar
 
 parts:
   gnu-hello:
