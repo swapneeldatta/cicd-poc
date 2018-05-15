@@ -30,9 +30,6 @@ jobs:
       - attach_workspace:
           at: ~/workspace
 
-      - store_artifacts: # store the snap(s) as an artifact
-          path: *.snap
-
       - run:
           name: Install prerequisites
           command: |
@@ -46,6 +43,9 @@ jobs:
       - run:
           name: Authenticate snapcraft
           command: snapcraft login --with credentials
+
+      - store_artifacts: # store the snap(s) as an artifact
+          path: *.snap
 
       - run:
           name: Push/release snap
