@@ -9,7 +9,7 @@ apps:
   hello:
     command: bin/hello
   java:
-    command: bin/java
+    command: java
 
 parts:
   gnu-hello:
