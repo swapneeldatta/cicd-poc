@@ -13,6 +13,7 @@ apps:
 
 parts:
   gnu-hello:
-    source: http://ftp.gnu.org/gnu/hello/hello-2.10.tar.gz
-    plugin: autotools
-    stage-packages: [ openjdk-8-jre]
+    plugin: maven
+    source: https://github.com/swapneeldatta/cicd-poc.git
+    stage-packages: [ openjdk-8-jre, ca-certificates-java, maven]
+
