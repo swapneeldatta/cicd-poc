@@ -8,7 +8,7 @@
 openssl enc -aes-256-cfb8 -bufsize 8 -e -in credentials -out .circleci/credentials.enc -md sha1
 
 # Decrypt
-# openssl des-ede3-ofb -d -in .circleci/credentials.enc -out credentials -k $SNAPCRAFT_CREDENTIALS_KEY -v
+# openssl -aes-256-cfb8 -d -bufsize 8 -in .circleci/credentials.enc -out credentials -k $SNAPCRAFT_CREDENTIALS_KEY -md sha1
 
 # Cleanup!
 #rm creds
