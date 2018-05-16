@@ -11,8 +11,8 @@ apps:
 
 parts:
   cd-test:
-    source: blob.tar.gz
+    source: target/blob.tar.gz
     plugin: dump
-    command: echo $(pwd)
     stage-packages: [ openjdk-8-jre, ca-certificates-java, maven]
+
 
