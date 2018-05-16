@@ -34,7 +34,6 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/workspace
-      - run: tree ~/
       - run: snapcraft
 
 workflows:
