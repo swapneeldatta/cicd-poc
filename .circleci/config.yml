@@ -4,12 +4,13 @@ defaults: &defaults
   docker:
     - image: snapcore/snapcraft:edge
 
-
 version: 2
 jobs:
   build:
     docker:
       - image: circleci/openjdk:8u171-node-browsers
+      - image: snapcore/snapcraft:edge
+
     steps:
       - checkout
       - run: 
