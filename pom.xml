@@ -45,7 +45,7 @@
 		                <addClasspath>true</addClasspath>
 		                <classpathPrefix>libs/</classpathPrefix>
 		                <mainClass>
-		                    com.dattus.poc.main.CDTest
+		                    com.buga.boxes.poc.main.CDTest
 		                </mainClass>
 		            </manifest>
 		        </archive>
