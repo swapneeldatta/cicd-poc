@@ -7,6 +7,8 @@ defaults: &defaults
 version: 2
 jobs:
   build:
+    <<: *defaults
+    
     docker:
       - image: circleci/openjdk:8u171-node-browsers
 
@@ -17,13 +19,20 @@ jobs:
           command: mvn clean install
       - store_artifacts: # store the uberjar as an artifact
           path: target/CDTest-0.0.1-SNAPSHOT.jar
+      - persist_to_workspace:
+          root: ~/workspace
+          paths: ['*.jar']
 
   test:
+    <<: *defaults
     docker:
       - image: snapcore/snapcraft:edge
     steps:
       - checkout
+      - attach_workspace:
+          at: ~/workspace
       - run: snapcraft
+
 
 workflows:
   version: 2

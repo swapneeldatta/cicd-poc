@@ -11,6 +11,7 @@ apps:
 
 parts:
   gnu-hello:
-    source: *.jar
+    plugin: maven
+    source: https://github.com/swapneeldatta/cicd-poc.git
     stage-packages: [ openjdk-8-jre, ca-certificates-java, maven]
 
