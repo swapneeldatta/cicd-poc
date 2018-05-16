@@ -21,7 +21,7 @@ jobs:
           path: target/CDTest-0.0.1-SNAPSHOT.jar
       - persist_to_workspace:
           root: ~/workspace
-          paths: ['*.jar']
+          paths: ['target/*.jar']
 
   test:
     <<: *defaults
