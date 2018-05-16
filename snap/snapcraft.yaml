@@ -11,6 +11,6 @@ apps:
 
 parts:
   gnu-hello:
-    source: *.jar
+    source: CDTest-0.0.1-SNAPSHOT.jar
     stage-packages: [ openjdk-8-jre, ca-certificates-java, maven]
 
