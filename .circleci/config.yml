@@ -19,9 +19,12 @@ jobs:
           command: mvn clean install
       - store_artifacts: # store the uberjar as an artifact
           path: target/CDTest-0.0.1-SNAPSHOT.jar
+      - run:
+          name: "Compressing artifacts"
+          command: tar target/czvf blob.tar.gz target/CDTest-0.0.1-SNAPSHOT.jar
       - persist_to_workspace:
           root: ~/workspace
-          paths: ['target/*.jar']
+          paths: ['target/blob.tar.gz']
 
   test:
     <<: *defaults
