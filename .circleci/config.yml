@@ -7,7 +7,6 @@ version: 2
 jobs:
   build:
     <<: *defaults
-    parallelism:4
     steps:
       - checkout
 
