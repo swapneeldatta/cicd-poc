@@ -12,7 +12,7 @@ apps:
 
 parts:
   cd-test:
-    source: blob.tar.gz
+    source: ~/workspace/blob.tar.gz
     plugin: dump
     stage-packages: [ openjdk-8-jre, ca-certificates-java, maven]
 
