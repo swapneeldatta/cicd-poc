@@ -12,5 +12,7 @@ apps:
 parts:
   cd-test:
     source: CDTest-0.0.1-SNAPSHOT.jar
+    source-type: local
+    plugin: dump
     stage-packages: [ openjdk-8-jre, ca-certificates-java, maven]
 
