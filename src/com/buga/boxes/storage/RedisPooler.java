@@ -12,6 +12,11 @@ public class RedisPooler implements AutoCloseable{
 	private JedisPool pool;
 	private final String LOCALHOST="redis://localhost:6379";
 	
+	public RedisPooler() {
+		Logger.getAnonymousLogger().info("Initializing redis pool...");
+		createClient();
+	}
+	
 	protected Jedis getClient() {
 		if(null==pool || pool.isClosed())
 			createClient();
