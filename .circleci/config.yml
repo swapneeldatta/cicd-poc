@@ -21,7 +21,7 @@ jobs:
           path: target/CDTest-0.0.1-SNAPSHOT.jar
       - run:
           name: "Compressing artifacts"
-          command: tar target/czvf blob.tar.gz target/CDTest-0.0.1-SNAPSHOT.jar
+          command: tar czvf target/blob.tar.gz target/CDTest-0.0.1-SNAPSHOT.jar
       - persist_to_workspace:
           root: ~/workspace
           paths: ['target/blob.tar.gz']
