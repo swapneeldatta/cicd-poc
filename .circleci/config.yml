@@ -1,8 +1,6 @@
 # Declaration of defaults
 defaults: &defaults
   working_directory: ~/workspace
-  docker:
-    - image: snapcore/snapcraft:edge
 
 version: 2
 jobs:
