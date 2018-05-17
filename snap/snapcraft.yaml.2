@@ -1,0 +1,28 @@
+name: buga-cicdtest
+version: '1.0.0'
+summary: CI-CD with snap
+description:  A test to check out CICD with snaps
+grade: stable
+confinement: strict
+
+apps:
+  buga-cicdtest:
+    #command: /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/bin/java -jar $SNAP/jar/CDTest-0.0.1-SNAPSHOT.jar
+    command: java -jar $SNAP/CDTest.jar
+    daemon: simple
+    #plugs: [network-bind]
+
+parts:
+  cd-test:
+    source: /root/workspace/blob.tar.gz
+    plugin: dump
+    build-packages:
+      - ca-certificates
+      - ca-certificates-java
+      - openjdk-8-jdk
+    stage-packages:
+      - openjdk-8-jdk
+
+  java:
+    plugin: jdk
+    source: .
