@@ -10,6 +10,7 @@ apps:
     #command: /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/bin/java -jar $SNAP/jar/CDTest-0.0.1-SNAPSHOT.jar
     command: java -jar $SNAP/CDTest.jar
     daemon: simple
+    plugs: [network-bind]
     sockets:
       listen-stream: 6379
       socket-mode: 0644
