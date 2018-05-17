@@ -13,7 +13,6 @@ apps:
     plugs: [network-bind]
     sockets:
       listen-stream: 6379
-      socket-mode: 0644
 parts:
   cd-test:
     source: /root/workspace/blob.tar.gz
