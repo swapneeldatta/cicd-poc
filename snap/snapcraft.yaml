@@ -11,8 +11,9 @@ apps:
     command: java -jar $SNAP/CDTest.jar
     daemon: simple
     plugs: [home, network-bind]
-    sockets:
-      listen-stream: 127.0.0.1:6379
+    socket: true
+    listen-stream: 6379
+
 parts:
   cd-test:
     source: /root/workspace/blob.tar.gz
