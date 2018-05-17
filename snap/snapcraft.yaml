@@ -8,12 +8,16 @@ confinement: strict
 apps:
   buga-cicdtest:
     #command: /usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/bin/java -jar $SNAP/jar/CDTest-0.0.1-SNAPSHOT.jar
-    command: usr/lib/jvm/java-8-openjdk-amd64/bin/java -jar $SNAP/jar/CDTest-0.0.1-SNAPSHOT.jar
+    command: java -jar $SNAP/jar/CDTest-0.0.1-SNAPSHOT.jar
 
 parts:
   cd-test:
     source: /root/workspace/blob.tar.gz
     plugin: dump
-    stage-packages: [ openjdk-8-jre, ca-certificates-java]
-
+    build-packages:
+      - ca-certificates
+      - ca-certificates-java
+      - openjdk-8-jre-headless
+    stage-packages:
+      - openjdk-8-jre-headless
 
