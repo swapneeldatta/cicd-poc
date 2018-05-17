@@ -32,8 +32,24 @@ jobs:
       - checkout
       - attach_workspace:
           at: ~/workspace
-      - run: snapcraft
+      - run: 
+          name: Build snap
+          command: snapcraft
+      - run:
+          name: Install prerequisites
+          command: |
+            sudo apt update
+            apt install -y openssl
+      - run:
+          name: Decrypt credentials
+          command: openssl enc -aes-256-cfb8 -d -bufsize 8 -in .circleci/credentials.enc -out credentials -k $SNAPCRAFT_CREDENTIALS_KEY -md sha1
 
+      - run:
+          name: Authenticate snapcraft
+          command: snapcraft login --with credentials
+      - run:
+          name: Publish snap
+          command: snapcraft push *.snap --release edge
 workflows:
   version: 2
   build_and_test:
