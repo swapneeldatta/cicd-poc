@@ -16,6 +16,12 @@ parts:
   cd-test:
     source: /root/workspace/blob.tar.gz
     plugin: dump
+    build-packages:
+      - ca-certificates
+      - ca-certificates-java
+      - openjdk-8-jdk
+    stage-packages:
+      - openjdk-8-jdk
 
   java:
     plugin: jdk
