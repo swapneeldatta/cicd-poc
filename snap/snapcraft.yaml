@@ -11,8 +11,6 @@ apps:
     command: java -jar $SNAP/CDTest.jar
     daemon: simple
     plugs: [home, network-bind]
-    socket: true
-    listen-stream: 6379
 
 parts:
   cd-test:
