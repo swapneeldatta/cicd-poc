@@ -14,7 +14,7 @@ import redis.clients.jedis.exceptions.JedisConnectionException;
 public class CDTest {
 	
 	static {
-		Logger.getAnonymousLogger().info("Version : "+Constants.version);
+		Logger.getAnonymousLogger().info("This is a test for CI-CD auto deployment.\nVersion : "+Constants.version);
 	}
 	
 	public static void main(String[] args) throws Exception{
