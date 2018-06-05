@@ -1,5 +1,5 @@
 package com.buga.boxes.poc.common;
 
 public interface Constants {
-	public static String version="18.5.4Mayur";
+	public static String version="18.5.4";
 }
